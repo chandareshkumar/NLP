@@ -11,7 +11,7 @@ mandate='r'
 
 word_list=nltk.corpus.words.words()
 
-puz=[w for w in word_list if len(w)>=6 and mandate in w and nltk.FreqDist(w)<puzzle]
+puz=[w for w in word_list if mandate in w and nltk.FreqDist(w)<puzzle]
 
 
-print(puz)
+print(set(puz))
